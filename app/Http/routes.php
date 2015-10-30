@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'CommonController@index');
+
+Route::group(['prefix'=>'admin', 'middleware' => 'auth.basic' ], function () {
+	Route::get('/', function () {
+	    return view('admin.index');
+	});
+	Route::resource('people', 'PeopleController');
 });
