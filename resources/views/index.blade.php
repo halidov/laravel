@@ -17,7 +17,7 @@
                         @foreach($people as $person)
                         <div class="panel panel-default">
                           <div class="panel-heading">
-                            <h3 class="panel-title">{{$person->first_name}} {{$person->first_lastname}}</h3>
+                            <h3 class="panel-title">{{$person->first_name}} {{$person->last_name}}</h3>
                           </div>
                           <div class="panel-body">
                             {{$person->descr}}
